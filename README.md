@@ -10,11 +10,11 @@ data=pd.read_csv(file_url)
 
  
 data.head()
-#	Pclass 티켓 클래스 
-#	SibSp 함께 탑승한 형제 및 배우자 수
-#	Parch 함께 탑승한 부모 및 자녀 수
-#   Embarked 승선한 항구
-#   Survived 생존 여부
+#Pclass 티켓 클래스 
+#SibSp 함께 탑승한 형제 및 배우자 수
+#Parch 함께 탑승한 부모 및 자녀 수
+#Embarked 승선한 항구
+#Survived 생존 여부
 
  
 data.info()
@@ -30,11 +30,11 @@ data.corr()
 #데이터 간의 상관 관계 분석
 #Parch 와 SibSp 의 상관관계가 높게 나타났다. 가족을 동반할 경우 부모와 자녀, 형제 배우자를 함께 동반할 가능성이 높기 대문이다.
 
-# 0.2 이하 상관관계가 거의 없다.
-# 0.2~0.4  : 낮은 상관 관계
-# 0.4~0.6 : 중간수준의 상관관계
-# 0.6~0.8 : 높은 상관관계
-# 0.8 이상 : 매우높은 상관관계
+#0.2 이하 상관관계가 거의 없다.
+#0.2~0.4  : 낮은 상관 관계
+#0.4~0.6 : 중간수준의 상관관계
+#0.6~0.8 : 높은 상관관계
+#0.8 이상 : 매우높은 상관관계
 
 
  
@@ -91,7 +91,7 @@ y=data['Survived']
 X_train, X_test, y_train, y_test=train_test_split(X,y,test_size=0.2,random_state=100) #학습셋과 시험셋 분리
 
  
-from sklearn.linear_model import LogisticRegression # 로지스틱 회귀 import
+from sklearn.linear_model import LogisticRegression #로지스틱 회귀 import
 
  
 model=LogisticRegression() #로지스틱 회귀 모델 생성
@@ -105,7 +105,7 @@ pred=model.predict(X_test) #예측
 from sklearn.metrics import accuracy_score #정확도 라이브러리 임포트
 accuracy_score(y_test,pred) #실제값과 예측값으로 정확도 계산
 
-# 78%이면 그렇게 나쁜 수준은 아니지만 엄청 잘 예측하는 모델이라고 할 수는 없습니다.
+#78%이면 그렇게 나쁜 수준은 아니지만 엄청 잘 예측하는 모델이라고 할 수는 없습니다.
 
 
  
@@ -137,7 +137,7 @@ model.fit(X_train, y_train) #모델 학습
 pred=model.predict(X_test) #예측
 accuracy_score(y_test,pred) #실제값과 예측값으로 정확도 계산
 
-# 피쳐엔지니어링으로 변수를 조정하여 조금 더 정확도를 높혔다
+#피쳐엔지니어링으로 변수를 조정하여 조금 더 정확도를 높혔다
 
 
 pred
